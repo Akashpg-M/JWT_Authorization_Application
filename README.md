@@ -3,11 +3,11 @@
 ## Overview
 **FastMed** is a health-tech platform designed to provide users with various healthcare-related services, including an AI chatbot for medical queries, hospital search, appointment booking, and pharmacy ordering. The project is divided into a **frontend** built with React and a **backend** (to be developed) using Express, Mongoose, and CORS.
 
-## Project Structure
 
+# Project Structure
 The project is structured as follows:
 
-Top-Level Structure:
+## Top-Level Structure:
 FastMed/
 ├── frontend/         # Frontend React.js application
 ├── backend/          # Backend Node.js and Express.js application
@@ -15,7 +15,7 @@ FastMed/
 ├── scripts/          # Utility scripts for deployment or automation
 └── README.md         # Project overview and instructions
 
-Detailed Frontend Structure:
+## Detailed Frontend Structure:
 frontend/
 ├── public/                    # Static public files (served directly)
 │   ├── index.html             # Main HTML file
@@ -39,7 +39,7 @@ frontend/
 ├── package.json               # Frontend dependencies
 └── README.md                  # Frontend-specific documentation
 
-Detailed Backend Structure:
+## Detailed Backend Structure:
 backend/
 ├── src/                       # Source code for backend
 │   ├── config/                # Configurations (e.g., database, environment variables)
@@ -72,13 +72,13 @@ backend/
 ├── package.json               # Backend dependencies
 ├── README.md                  # Backend-specific documentation
 
-Scripts Folder:
+## Scripts Folder:
 scripts/
 ├── deploy-frontend.sh         # Script for deploying the frontend
 ├── deploy-backend.sh          # Script for deploying the backend
 └── db-seed.js                 # Script for seeding initial data to the database
 
-Docs Folder:
+## Docs Folder:
 docs/
 ├── project-plan.md            # Project roadmap and feature breakdown
 ├── architecture-diagram.png   # System architecture diagram
