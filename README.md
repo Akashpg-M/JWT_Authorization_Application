@@ -6,7 +6,7 @@
 
 # Project Structure
 The project is structured as follows:
-
+```plaintext
 ## Top-Level Structure:
 FastMed/
 ├── frontend/         # Frontend React.js application
@@ -83,7 +83,7 @@ docs/
 ├── project-plan.md            # Project roadmap and feature breakdown
 ├── architecture-diagram.png   # System architecture diagram
 └── api-documentation.md       # API endpoints and usage
-
+```
 
 ## Technologies Used
 - **Frontend**: React (for building the UI)
