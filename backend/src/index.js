@@ -1,11 +1,13 @@
-//require('dotenv').config({path: './env'})
+// require('dotenv').config()  //{path: './env'}
 import dotenv from "dotenv"
 import connectDB from "./db/index.js ";
 
 dotenv.config({
     path: './.env'
-})
-
+}) //    path: './.env'
+console.log('Environment variables loaded:', process.env);
+console.log('API Key:', process.env.MONGODB_URI);
+console.log('Port:', process.env.PORT);
 connectDB()
 
 
