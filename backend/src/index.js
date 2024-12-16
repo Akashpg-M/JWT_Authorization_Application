@@ -8,7 +8,16 @@ dotenv.config({
 console.log('Environment variables loaded:', process.env);
 console.log('API Key:', process.env.MONGODB_URI);
 console.log('Port:', process.env.PORT);
+
 connectDB()
+.then(() => {
+    app.listen(process.env.PORT || 8000, () => {
+        console.log(` Server is running at port : ${process.env.PORT}`);
+    })
+})
+.catch((err)=>{
+    console.log*"MongoDB Connection FAILED"
+})
 
 
 // import express from "express";
