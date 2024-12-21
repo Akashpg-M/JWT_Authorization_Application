@@ -1,0 +1,5 @@
+POST : http://localhost:8000/api/v1/users/Register
+"name": "user1",
+"email": "test@example.com",
+"password": "password123",
+"phone": "1234567890"
