@@ -60,15 +60,25 @@ backend/
 │   │   ├── hospitalRoutes.js
 │   │   ├── appointmentRoutes.js
 │   │   └── pharmacyRoutes.js
+|   |__ db/
+|   |   |__ index.js
 │   ├── middlewares/           # Middleware for authentication, error handling
 │   │   ├── authMiddleware.js
 │   │   └── errorMiddleware.js
 │   ├── utils/                 # Utility functions
 │   │   ├── logger.js
 │   │   └── responseHelper.js
+|   |   |__ ApiError.js
+|   |   |__ ApiResponse.js
+|   |   |__ asyncHandler.js
 │   ├── app.js                 # Express app setup
+|   |__ constants.js
+|   |__ index.js
 │   ├── server.js              # Server entry point
 │   └── .env                   # Backend environment variables
+|   |__.env.sample
+|   |__ .prettierignore
+|   |__ .prettierrc
 ├── package.json               # Backend dependencies
 ├── README.md                  # Backend-specific documentation
 
