@@ -23,9 +23,10 @@ app.use(cookieParser());
 //routes import
 
 import userRouter from './routes/user.routes.js'
-
+import hospitalRoutes from './routes/hospital.routes.js'
 //routes declaration
 app.use("/api/v1/users", userRouter);
+app.use("/api/v1/hospitals", hospitalRoutes);
 
 //http://localhost:8000/api/v1/users/register
 
