@@ -144,6 +144,48 @@ docs/
 4. **Pharmacy Ordering**:
    - Implement pharmacy features where users can search for medicines, add them to the cart, and proceed to the payment.
 
+### Platform's Core Functionalities
+  ## Homepage (Landing Page)
+  
+  ## A welcoming page where users can see the platform's features (e.g., hospital search, appointments, pharmacy orders).
+  Includes a navigation bar to explore different sections.
+  
+  ## Hospital Search
+  
+    Two Search Methods:
+  
+    a) Manual Search:
+    Users manually input their current location or let the platform fetch it via the browser's Geolocation API.
+    They type a hospital name (e.g., "Apollo") to see a list of matching hospitals, sorted by distance from their location.
+    A map shows the user's location and hospitals near them (no routes initially).
+    
+    b) Filtered Search:
+    Users select from dropdowns:
+    Illness Type (e.g., Cardiology, Orthopedics).
+    Number of Hospitals to display (e.g., 5 nearest or 10 nearest).
+    The platform fetches hospitals offering relevant facilities within a set radius.
+    Results are shown as a list with distance and basic details.
+    The map highlights the user's location and hospital locations.
+  
+  Appointment System
+  
+ ## Users can select a hospital and book an appointment.
+  The system shows available doctors and time slots.
+  Once an appointment is booked, confirmation is sent to the user.
+  Pharmacy Orders
+  
+ ## Users can search for medications, view details, add to a cart, and proceed to payment.
+  Medicines can be delivered to the user's address or picked up from a nearby pharmacy.
+  AI Chatbot
+  
+ ## A conversational assistant to answer health-related queries.
+  Can suggest the nearest hospitals or help book appointments.
+  Redirects users to the hospital search or appointment pages when necessary.
+  User Authentication
+  
+ ## Secure login/signup for users to access personalized features like saved searches or past appointments.
+  Authentication handled via JWT in the backend.
+
 ## Workflow
 - Start with basic setup and placeholder components.
 - Develop each feature one by one in the following order:
