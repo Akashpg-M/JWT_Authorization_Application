@@ -1,1 +1,1 @@
-export const DB_NAME = "FastMed"
+export const User_Auth_Data = "User"
