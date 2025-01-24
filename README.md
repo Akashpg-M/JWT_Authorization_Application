@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # FastMed Project
 
 ## Overview
@@ -222,5 +223,4 @@ git remote add origin https://github.com/Akashpg-M/FastMed.git
 git push -u origin main
 cd frontend/src
 mkdir components pages
-
 
