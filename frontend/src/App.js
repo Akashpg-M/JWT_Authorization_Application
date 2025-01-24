@@ -1,22 +1,15 @@
-import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { HospitalProvider } from './context/HospitalContext';  // Import HospitalContext
-import Navbar from './components/Navbar';  // Assuming you have a Navbar component
-import Footer from './components/Footer';  // Assuming you have a Footer component
-import Routes from './routes';  // Import routing definitions
+import { Route, Routes } from "react-router-dom";
+import LandingPage from "./LandingPage";
+import AuthApp from "./AuthApp/AuthDashboard.jsx"; // Import Auth Dashboard
 
-import './App.css';  // Assuming you have global styles
-
-const App = () => {
-  return (
-    <HospitalProvider>  {/* Wrap the application in the HospitalContext provider */}
-      <Router>  {/* React Router for handling page navigation */}
-        <Navbar />
-        <Routes />  {/* This will handle the different page routes */}
-        <Footer />
-      </Router>
-    </HospitalProvider>
-  );
-};
+function App() {
+	return (
+		<Routes>
+			<Route path="/" element={<LandingPage />} />
+			<Route path="/auth/*" element={<AuthApp />} />
+			<Route path="*" element={<LandingPage />} />
+		</Routes>
+	);
+}
 
 export default App;
