@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useAuthStore } from '../store/authStore';
-import Input from "../components/Input";
+import Input from "../Auth_Application/components/Input";
 
 const ResetPasswordPage = () => {
   const [password, setPassword] = useState("");

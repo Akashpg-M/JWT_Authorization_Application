@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
-import Input from "../components/Input";
-import PasswordStrengthMeter from "../components/PasswordStrengthMeter";
+import Input from "../Auth_Application/components/Input";
+import PasswordStrengthMeter from "../Auth_Application/components/PasswordStrengthMeter";
 import { Loader, User, Mail, Lock, Phone } from "lucide-react";
 import { useAuthStore } from "../store/authStore";
 
