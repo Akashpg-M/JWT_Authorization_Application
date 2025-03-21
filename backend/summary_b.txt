@@ -1,0 +1,25 @@
+src
+  -Auth_service
+    -controller
+      -auth.controller.js
+    -mailtrap
+      emails.js
+      emailTemplate.js
+      mailtrap.config.js
+    -middleware
+      -verifyToken.js
+    -models
+      user.models.js
+    -routes
+      user.routes.js
+    -services
+      {none}
+    -utils
+      generateToken.js
+
+  Map_Services
+    {to be implemented}
+
+    
+  index.js
+  constants.js

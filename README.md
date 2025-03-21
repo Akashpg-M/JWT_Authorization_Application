@@ -224,3 +224,7 @@ git push -u origin main
 cd frontend/src
 mkdir components pages
 
+list of packages installed:
+
+npm i react-router-dom
+npm i react-hot-toast
