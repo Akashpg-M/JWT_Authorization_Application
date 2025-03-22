@@ -77,8 +77,8 @@
 //   )
 // }
 
-
 // export default LoginPage;
+
 
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -99,14 +99,14 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-500 to-indigo-600 p-6">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="max-w-md w-full bg-gray-900 bg-opacity-50 backdrop-filter backdrop-blur-xl rounded-2xl shadow-xl overflow-hidden p-8 text-black"
-      >
-        <h2 className="text-2xl font-semibold text-center mb-6">Welcome Back</h2>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="bg-gray-900 min-h-screen flex flex-col items-center justify-center text-white p-6"
+    >
+      <div className="max-w-md w-full bg-gray-800 p-8 rounded-2xl shadow-xl text-center">
+        <h2 className="text-3xl font-bold text-red-500 mb-6">Welcome Back</h2>
 
         <form onSubmit={handleLogin} className="space-y-4">
           <Input
@@ -115,7 +115,7 @@ const LoginPage = () => {
             placeholder="Email Address"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full p-3 bg-gray-700 border border-red-500 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-red-500"
           />
 
           <Input    
@@ -124,38 +124,38 @@ const LoginPage = () => {
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full p-3 bg-gray-700 border border-red-500 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-red-500"
           />
 
           <div className="text-right">
-            <Link to="/forgot-password" className="text-blue-300 hover:underline">
+            <Link to='/forgot-password' className="text-red-400 hover:text-red-500 transition">
               Forgot password?
             </Link>
           </div>
 
-          {error && <p className="text-red-500 font-semibold mb-2 text-center">{error}</p>}
+          {error && <p className='text-red-500 font-semibold mb-2'>{error}</p>}
 
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            type="submit"
+            type='submit'
             disabled={isLoading}
-            className="w-full bg-blue-500 text-white px-5 py-2 rounded-lg shadow-md hover:bg-blue-600 transition disabled:opacity-50 disabled:cursor-not-allowed"
+            className="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition-all w-full"
           >
-            {isLoading ? <Loader className="w-6 h-6 animate-spin mx-auto" /> : "Login"}
+            {isLoading ? <Loader className='w-6 h-6 animate-spin mx-auto' /> : "Login"}
           </motion.button>
         </form>
+      </div>
 
-        <div className="text-center mt-4">
-          <p className="text-gray-300">
-            Don't have an account?{" "}
-            <Link to="/signup" className="text-blue-300 hover:underline">
-              Sign up
-            </Link>
-          </p>
-        </div>
-      </motion.div>
-    </div>
+      <div className="mt-6 text-center">
+        <p className="text-gray-300">
+          Don't have an account? {" "}
+          <Link to="/signup" className="text-red-400 hover:text-red-500 transition">
+            Sign up
+          </Link>
+        </p>
+      </div>
+    </motion.div>
   );
 };
 

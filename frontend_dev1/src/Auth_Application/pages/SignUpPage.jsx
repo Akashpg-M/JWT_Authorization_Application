@@ -95,6 +95,7 @@
 
 // export default SignUpPage;
 
+
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
@@ -111,7 +112,6 @@ const SignUpPage = () => {
     const navigate = useNavigate();
     
     const { signup, error, isLoading } = useAuthStore();
-
     const handleSignUp = async (e) => {
         e.preventDefault();
         try {
@@ -123,77 +123,77 @@ const SignUpPage = () => {
     };
 
     return ( 
-      <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-500 to-indigo-600 p-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="max-w-md w-full bg-gray-900 bg-opacity-50 backdrop-filter backdrop-blur-xl rounded-2xl shadow-xl overflow-hidden p-8 text-white"
-        >
-          <h2 className="text-2xl font-semibold text-center mb-6">Create Account</h2>
+          className="bg-gray-900 min-h-screen flex flex-col items-center justify-center text-white p-6 overflow-hidden">
 
-          <form onSubmit={handleSignUp} className="space-y-4">
-            <Input
-              icon={User}
-              type="text"
-              placeholder="Full Name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
+        
+            <div className="max-w-md w-full bg-gray-800 p-8 rounded-2xl shadow-xl text-center">
+                <h2 className="text-3xl font-bold text-red-500 mb-6">Create Account</h2>
 
-            <Input
-              icon={Mail}
-              type="email"
-              placeholder="Email Address"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
+                <form onSubmit={handleSignUp} className="space-y-4">
+                    <Input
+                      icon={User}
+                      type="text"
+                      placeholder="Full Name"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      className="w-full p-3 bg-gray-700 border border-red-500 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-red-500"
+                    />
 
-            <Input
-              icon={Lock}
-              type="password"
-              placeholder="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
+                    <Input
+                      icon={Mail}
+                      type="email"
+                      placeholder="Email Address"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="w-full p-3 bg-gray-700 border border-red-500 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-red-500"
+                    />
 
-            <Input
-              icon={Phone}
-              type="tel"
-              placeholder="Phone Number"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
+                    <Input
+                      icon={Lock}
+                      type="password"
+                      placeholder="Password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      className="w-full p-3 bg-gray-700 border border-red-500 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-red-500"
+                    />
 
-            <PasswordStrengthMeter password={password} />
+                    <Input
+                      icon={Phone}
+                      type="tel"
+                      placeholder="Phone Number"
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
+                      className="w-full p-3 bg-gray-700 border border-red-500 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-red-500"
+                    />
 
-            {error && <p className="text-red-500 font-semibold text-center">{error}</p>}
+                    {error && <p className='text-red-500 font-semibold mt-2'>{error}</p>}
+                    <PasswordStrengthMeter password={password} />
 
-            <motion.button
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              type="submit"
-              disabled={isLoading}
-              className="w-full bg-blue-500 text-white px-5 py-2 rounded-lg shadow-md hover:bg-blue-600 transition disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              {isLoading ? <Loader className="animate-spin mx-auto" size={24} /> : "Sign Up"}
-            </motion.button>
-          </form>
-
-          <div className="text-center mt-4">
-            <p className="text-gray-300">
-              Already have an account?{" "}
-              <Link to="/login" className="text-blue-300 hover:underline">
-                Login
-              </Link>
-            </p>
-          </div>
+                    <motion.button
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      type='submit'
+                      disabled={isLoading}
+                      className="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition-all w-full"
+                    >
+                        {isLoading ? <Loader className='animate-spin mx-auto' size={24}/> : "Sign Up"}
+                    </motion.button>
+                </form>
+            </div>
+            
+            <div className="mt-6 text-center">
+                <p className="text-gray-300">
+                    Already have an account? {" "}
+                    <Link to="/login" className="text-red-400 hover:text-red-500 transition">
+                      Login
+                    </Link>
+                </p>  
+            </div>
         </motion.div>
-      </div>
     );
 };
 
